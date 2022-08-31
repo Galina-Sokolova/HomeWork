@@ -7,11 +7,15 @@ int num = A;
 while ( num != 0 )
 {
     int rem = num % 10;
-    int rem1 = A % rem;
     num /= 10;
-    if (rem1 == 0) 
+    if (rem != 0)
     {
-        sum = sum + rem;
+        int rem1 = A % rem;
+        if (rem1 == 0) 
+        {
+            sum = sum + rem;
+        }
+    
     }
 }
 Console.Write("сумма цифр, которые являются делителями числа "+A+" = "+sum);
